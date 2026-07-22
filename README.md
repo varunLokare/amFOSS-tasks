@@ -1,4 +1,4 @@
-# AMFOSS-TASKS
+# Amfoss-Tasks
 
 ## INTRODUCTION
 My name is Varun Nagnath Lokare, and I am a Second-year B.Tech Computer Science undergraduate at Amrita Vishwa Vidyapeetham, Amritapuri campus.  I am extremely hardworking and persistent in every task I undertake. Outside of academics, my hobbies include playing badminton, swimming, and skating amd I do listen to music and spend time with art.
