@@ -1,5 +1,5 @@
 # Git Exercises
-
+IT ALL BEGINS WITH CLONING REPO
 ---
 
 # 1. Master
