@@ -1,4 +1,4 @@
-# Git Exercises
+   # Git Exercises
 IT ALL BEGINS WITH CLONING REPO
 ---
 
@@ -60,3 +60,22 @@ git commit -m "commit B.txt"
 ```bash
 git verify
 ```
+4.Ignore them 
+Objective:
+To ignore few files that are lowk useless and the files like generated files, compiled code, or libraries which are usually avoided by the developers.
+
+commands used :
+echo "*.exe" > .gitignore
+echo "*.o" >> .gitignore
+echo "*.jar" >> .gitignore
+echo "libraries/" >> .gitignore
+
+Here a file .gitignore and append the four rules line-by-line: *.exe *.o, *.jar, libraries/ in it 
+
+git add .gitignore
+It moves .gitignore from the working directory to the staging area. 
+git commit -m "Add .gitignore rules"
+Saves the staged .gitignore file as a permanent revision in your local Git repository with an attached descriptive log mess
+
+git veryfy
+To verify the exercise.
