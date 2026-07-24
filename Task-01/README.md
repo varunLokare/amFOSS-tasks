@@ -78,4 +78,25 @@ git commit -m "Add .gitignore rules"
 Saves the staged .gitignore file as a permanent revision in your local Git repository with an attached descriptive log mess
 
 git veryfy
-To verify the exercise.
+To verify the exercise...
+
+5.Chase branch
+Objective :
+Bring the missing work from the escaped branch to the main chase-branch so both branches are up to date and sharing the same progress.
+commands used :
+git merge escaped
+Pulls all the information from the escape branch and drops it directly to the curruent working branch
+
+git verify
+To verify the exercise...
+
+6.Merge Conflict
+git reset --hard HEAD~2 (my thing was already making branches so error aa raha tha) idk what it doesn but dekhtey hai 
+
+echo "2+3=5" > equation.txt
+
+git add equation.txt
+
+git commit -m "Resolve merge conflict"
+
+git verify
