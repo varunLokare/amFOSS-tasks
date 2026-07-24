@@ -75,7 +75,7 @@ Here a file .gitignore and append the four rules line-by-line: *.exe *.o, *.jar,
 git add .gitignore
 It moves .gitignore from the working directory to the staging area. 
 git commit -m "Add .gitignore rules"
-Saves the staged .gitignore file as a permanent revision in your local Git repository with an attached descriptive log mess
+Saves the staged .gitignore file as a permanent revision in your local Git repository with an attached descriptive information
 
 git veryfy
 To verify the exercise...
@@ -91,12 +91,55 @@ git verify
 To verify the exercise...
 
 6.Merge Conflict
-git reset --hard HEAD~2 (my thing was already making branches so error aa raha tha) idk what it doesn but dekhtey hai 
+git reset --hard HEAD~2
+Erases the last 2 git commits and then resets the work to get rid of the broked merge error 
 
 echo "2+3=5" > equation.txt
-
+Creates a file equation.txt with the correction of mathematically correct linw "2+3=5"
 git add equation.txt
-
+Movces equation.txt from working directory to the staging area 
 git commit -m "Resolve merge conflict"
+Changes get commited into your local git repo with and attacehed discriptive information
 
 git verify
+To verify the exercise...
+
+7.Save your work
+Objective :
+Temporarily hide the incomplete and unfinshed work , jump in to an urgent commit fix then bring back the stashed work and then finish it 
+commands used:
+
+git stash
+Takes the incomplete ,unfinished work and then stores it safely out of sight so that the work place stays completely clean 
+
+nano bug.txt
+It opends the fine bug.txt in the terminal editor to fix the text error 
+
+git add bug.txt
+git commit -m "Fix bug"
+The file bug.txt moves from the working directory to the staging directory and then its commited to the local git repo
+
+git stash pop
+Retrieves the incomplete hidden file from the stash shelf and resotres it right where we left it 
+echo "Finally, finished it!" >> bug.txt
+Adding the text "Finally, finished it!" into bug.txt
+
+git add .
+stages all the file changes at once 
+git commit -m "Finish work"
+Saves the complete work as one single final commit
+
+git verify
+Vefiry the exercise ...
+
+8.Change branch history 
+Objective :
+To move the current branch work above the hot-bugfix branch to adopt its bug fixes while keeping a clean history,
+
+commands used:
+
+git rebase hot-bugfix
+It moves your branch's recent commits so they sit directly above the latest hot-bugfix updates, keeping the projeact and clean and in linaer order 
+git verify
+Vefrify the exercise...9.
+
