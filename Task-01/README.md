@@ -1,7 +1,9 @@
-GIT EXERCISES 
-1.Master :
+#GIT EXERCISES 
+
+##1.Master :
 the given first task was all about starting the tasks and initializing it 
-commands used :
+
+##commands used :
 -git start master 
 -git verify
 
