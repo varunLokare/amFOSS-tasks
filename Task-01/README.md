@@ -152,9 +152,32 @@ git rm --cached ignored.txt
 Removes the file ignored.txt from the staging area but stores it intact into the device hardware
 
 git commit -m "Stop tracking ignored.txt"
-To commit changes into the actual working repo 
+Saves this removal into your Git history as a new commit. 
 git verify
 Verify the ecercise...
 
-10.
+10.Case-sensitive-filename
+Objective :
+Safely rename a file in your repo so that Git trackes its name and not treate it like a junk file, or a brand new untracked file
 
+commands used :
+git mv File.txt file.txt
+Rename the file "File.txt" to "file.txt" and automatically stages the deletion of the old name and the addition of the new one.
+
+git commit -m "Rename old_filename.txt to new_filename.txt"
+git verify
+
+11.fix-typo
+Objective:
+
+commands used:
+
+nano file.txt
+To open the file.txt in the termial editor to make the error changes.
+
+git add file.txt
+Moves file.txt from working directory to staging directory 
+
+git commit --amend -m "Add Hello world"
+
+git verify
