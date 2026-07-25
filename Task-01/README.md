@@ -134,12 +134,27 @@ Vefiry the exercise ...
 
 8.Change branch history 
 Objective :
-To move the current branch work above the hot-bugfix branch to adopt its bug fixes while keeping a clean history,
+To move the current branch work above the hot-bugfix branch to adopt its bug fixes while keeping a clean amd linaewr history.
 
 commands used:
 
 git rebase hot-bugfix
-It moves your branch's recent commits so they sit directly above the latest hot-bugfix updates, keeping the projeact and clean and in linaer order 
+It moves your branch's recent commits so they sit directly above the latest hot-bugfix updates, keeping the projeact and clean . 
 git verify
-Vefrify the exercise...9.
+Vefrify the exercise...
+
+9.Remove Ignored 
+Objective :
+To tell git to stop tracking the files that are to be ignored while keepoing the l files safely on ur local device
+
+commands used:
+git rm --cached ignored.txt
+Removes the file ignored.txt from the staging area but stores it intact into the device hardware
+
+git commit -m "Stop tracking ignored.txt"
+To commit changes into the actual working repo 
+git verify
+Verify the ecercise...
+
+10.
 
