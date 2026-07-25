@@ -1,12 +1,10 @@
-   # Git Exercises
-IT ALL BEGINS WITH CLONING REPO
----
+# Git Exercises
 
-# 1. Master
+## 1. Master
 
-The given first task was all about starting the tasks and initializing it.
+The first task was about starting the exercise and initializing the repository.
 
-## Commands Used
+### Commands Used
 
 ```bash
 git start master
@@ -15,33 +13,33 @@ git verify
 
 ---
 
-# 2. Commit One File
+## 2. Commit One File
 
-Now as per the task there are two files and we just need to commit one of the files.
+In this task, there are two files, but only one file needs to be committed.
 
-Let the file be **A.file**.
+Let the file be **A.txt**.
 
-## Commands Used
+### Commands Used
 
 ```bash
 git add A.txt
 ```
 
-> The command `git add A.txt` will look for a specific file named exactly `A.txt` in your current directory and stage it.
+> Stages the file `A.txt` so it is ready to be committed.
 
 ```bash
 git commit -m "Commit A.txt file"
 ```
 
-> This command is used to permanently save your changes to your project's local history.
+> Creates a new commit containing the staged changes.
 
 ---
 
-# 3. Commit One File of Two Currently Staged
+## 3. Commit One File of Two Currently Staged
 
-There are two files created in the root project directory, namely **A.txt** and **B.txt**, and both are added to the staging area. The goal is to commit only one file among them.
+Both **A.txt** and **B.txt** are staged. The goal is to commit only **B.txt**.
 
-## Commands Used
+### Commands Used
 
 ```bash
 git start commit-one-file-staged
@@ -51,133 +49,284 @@ git start commit-one-file-staged
 git reset A.txt
 ```
 
-> This command removes `A.txt` from the staging area without deleting your work or your actual file.
+> Removes `A.txt` from the staging area while keeping the file unchanged.
 
 ```bash
-git commit -m "commit B.txt"
+git commit -m "Commit B.txt"
 ```
+
+> Commits only `B.txt`.
 
 ```bash
 git verify
 ```
-4.Ignore them 
-Objective:
-To ignore few files that are lowk useless and the files like generated files, compiled code, or libraries which are usually avoided by the developers.
 
-commands used :
+> Verifies the exercise.
+
+---
+
+## 4. Ignore Them
+
+### Objective
+
+Ignore files and folders that should not be tracked by Git, such as compiled files, executables, and libraries.
+
+### Commands Used
+
+```bash
 echo "*.exe" > .gitignore
 echo "*.o" >> .gitignore
 echo "*.jar" >> .gitignore
 echo "libraries/" >> .gitignore
+```
 
-Here a file .gitignore and append the four rules line-by-line: *.exe *.o, *.jar, libraries/ in it 
+> Creates a `.gitignore` file and adds rules to ignore `.exe`, `.o`, `.jar` files and the `libraries/` directory.
 
+```bash
 git add .gitignore
-It moves .gitignore from the working directory to the staging area. 
+```
+
+> Stages the `.gitignore` file.
+
+```bash
 git commit -m "Add .gitignore rules"
-Saves the staged .gitignore file as a permanent revision in your local Git repository with an attached descriptive information
+```
 
-git veryfy
-To verify the exercise...
+> Saves the ignore rules in the repository.
 
-5.Chase branch
-Objective :
-Bring the missing work from the escaped branch to the main chase-branch so both branches are up to date and sharing the same progress.
-commands used :
+```bash
+git verify
+```
+
+> Verifies the exercise.
+
+---
+
+## 5. Chase Branch
+
+### Objective
+
+Bring the missing work from the `escaped` branch into the current branch.
+
+### Commands Used
+
+```bash
 git merge escaped
-Pulls all the information from the escape branch and drops it directly to the curruent working branch
+```
 
+> Merges the changes from the `escaped` branch into the current branch.
+
+```bash
 git verify
-To verify the exercise...
+```
 
-6.Merge Conflict
+> Verifies the exercise.
+
+---
+
+## 6. Merge Conflict
+
+### Objective
+
+Resolve the merge conflict and commit the corrected version.
+
+### Commands Used
+
+```bash
 git reset --hard HEAD~2
-Erases the last 2 git commits and then resets the work to get rid of the broked merge error 
+```
 
+> Removes the last two commits and restores the repository to a previous state.
+
+```bash
 echo "2+3=5" > equation.txt
-Creates a file equation.txt with the correction of mathematically correct linw "2+3=5"
+```
+
+> Replaces the contents of `equation.txt` with the correct equation.
+
+```bash
 git add equation.txt
-Movces equation.txt from working directory to the staging area 
+```
+
+> Stages the resolved file.
+
+```bash
 git commit -m "Resolve merge conflict"
-Changes get commited into your local git repo with and attacehed discriptive information
+```
 
+> Commits the resolved changes.
+
+```bash
 git verify
-To verify the exercise...
+```
 
-7.Save your work
-Objective :
-Temporarily hide the incomplete and unfinshed work , jump in to an urgent commit fix then bring back the stashed work and then finish it 
-commands used:
+> Verifies the exercise.
 
+---
+
+## 7. Save Your Work
+
+### Objective
+
+Temporarily save unfinished work, fix an urgent bug, then restore the unfinished work and complete it.
+
+### Commands Used
+
+```bash
 git stash
-Takes the incomplete ,unfinished work and then stores it safely out of sight so that the work place stays completely clean 
+```
 
+> Temporarily stores all uncommitted changes.
+
+```bash
 nano bug.txt
-It opends the fine bug.txt in the terminal editor to fix the text error 
+```
 
+> Opens `bug.txt` to fix the bug.
+
+```bash
 git add bug.txt
 git commit -m "Fix bug"
-The file bug.txt moves from the working directory to the staging directory and then its commited to the local git repo
+```
 
+> Stages and commits the bug fix.
+
+```bash
 git stash pop
-Retrieves the incomplete hidden file from the stash shelf and resotres it right where we left it 
+```
+
+> Restores the previously stashed work.
+
+```bash
 echo "Finally, finished it!" >> bug.txt
-Adding the text "Finally, finished it!" into bug.txt
+```
 
+> Adds the final line to complete the file.
+
+```bash
 git add .
-stages all the file changes at once 
 git commit -m "Finish work"
-Saves the complete work as one single final commit
+```
 
+> Stages all remaining changes and commits the completed work.
+
+```bash
 git verify
-Vefiry the exercise ...
+```
 
-8.Change branch history 
-Objective :
-To move the current branch work above the hot-bugfix branch to adopt its bug fixes while keeping a clean amd linaewr history.
+> Verifies the exercise.
 
-commands used:
+---
 
+## 8. Change Branch History
+
+### Objective
+
+Move the current branch commits on top of the `hot-bugfix` branch while maintaining a clean, linear history.
+
+### Commands Used
+
+```bash
 git rebase hot-bugfix
-It moves your branch's recent commits so they sit directly above the latest hot-bugfix updates, keeping the projeact and clean . 
+```
+
+> Replays the current branch commits on top of `hot-bugfix`.
+
+```bash
 git verify
-Vefrify the exercise...
+```
 
-9.Remove Ignored 
-Objective :
-To tell git to stop tracking the files that are to be ignored while keepoing the l files safely on ur local device
+> Verifies the exercise.
 
-commands used:
+---
+
+## 9. Remove Ignored
+
+### Objective
+
+Stop tracking a file while keeping it on the local machine.
+
+### Commands Used
+
+```bash
 git rm --cached ignored.txt
-Removes the file ignored.txt from the staging area but stores it intact into the device hardware
+```
 
+> Removes `ignored.txt` from Git tracking without deleting the local file.
+
+```bash
 git commit -m "Stop tracking ignored.txt"
-Saves this removal into your Git history as a new commit. 
+```
+
+> Saves the change in Git history.
+
+```bash
 git verify
-Verify the ecercise...
+```
 
-10.Case-sensitive-filename
-Objective :
-Safely rename a file in your repo so that Git trackes its name and not treate it like a junk file, or a brand new untracked file
+> Verifies the exercise.
 
-commands used :
+---
+
+## 10. Case-Sensitive Filename
+
+### Objective
+
+Rename a file by changing only its letter casing.
+
+### Commands Used
+
+```bash
 git mv File.txt file.txt
-Rename the file "File.txt" to "file.txt" and automatically stages the deletion of the old name and the addition of the new one.
+```
 
-git commit -m "Rename old_filename.txt to new_filename.txt"
+> Renames the file and stages the change automatically.
+
+```bash
+git commit -m "Rename File.txt to file.txt"
+```
+
+> Commits the filename change.
+
+```bash
 git verify
+```
 
-11.fix-typo
-Objective:
+> Verifies the exercise.
 
-commands used:
+---
 
+## 11. Fix Typo
+
+### Objective
+
+Update the previous commit by adding the missed changes without creating a new commit.
+
+### Commands Used
+
+```bash
 nano file.txt
-To open the file.txt in the termial editor to make the error changes.
+```
 
+> Opens `file.txt` to correct the typo.
+
+```bash
 git add file.txt
-Moves file.txt from working directory to staging directory 
+```
 
+> Stages the corrected file.
+
+```bash
 git commit --amend -m "Add Hello world"
+```
 
+> Replaces the previous commit with the updated changes and commit message.
+
+```bash
 git verify
+```
+
+> Verifies the exercise.
+
+
+12.forge-data
