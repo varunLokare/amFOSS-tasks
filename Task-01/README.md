@@ -2,15 +2,13 @@
 
 ## 1. Master
 
-The first task was about starting the exercise and initializing the repository.
-
 ### Commands Used
 
 ```bash
 git start master
 git verify
 ```
-
+THIS IS WHERE THE TASK BEGINS 
 ---
 
 ## 2. Commit One File
@@ -25,19 +23,19 @@ Let the file be **A.txt**.
 git add A.txt
 ```
 
-> Stages the file `A.txt` so it is ready to be committed.
+> Moves the  file `A.txt` from the working directory to the staging area.
 
 ```bash
 git commit -m "Commit A.txt file"
 ```
 
-> Creates a new commit containing the staged changes.
+> Saves all the committed changes locally with a descriptive message .
 
 ---
 
 ## 3. Commit One File of Two Currently Staged
 
-Both **A.txt** and **B.txt** are staged. The goal is to commit only **B.txt**.
+Here both  files **A.txt** and **B.txt** are staged. Our objective here is to commit only **B.txt**.
 
 ### Commands Used
 
@@ -69,7 +67,7 @@ git verify
 
 ### Objective
 
-Ignore files and folders that should not be tracked by Git, such as compiled files, executables, and libraries.
+Here out objective is to ignore files and folders that should not be tracked by Git, such as compiled files, and libraries.
 
 ### Commands Used
 
@@ -80,19 +78,19 @@ echo "*.jar" >> .gitignore
 echo "libraries/" >> .gitignore
 ```
 
-> Creates a `.gitignore` file and adds rules to ignore `.exe`, `.o`, `.jar` files and the `libraries/` directory.
+> A file `.gitignore` is been created and then addrules to ignore `.exe`, `.o`, `.jar` files and the `libraries/` directory so that these files of such format be ignored .
 
 ```bash
 git add .gitignore
 ```
 
-> Stages the `.gitignore` file.
+> Takes the `.gitignore` file from working directory to staging area.
 
 ```bash
 git commit -m "Add .gitignore rules"
 ```
 
-> Saves the ignore rules in the repository.
+> Saves the ignore rules in the repository by committing the changes.
 
 ```bash
 git verify
