@@ -8,7 +8,7 @@
 git start master
 git verify
 ```
-THIS IS WHERE THE TASK BEGINS 
+THIS IS WHERE THE TASK BEGINS >_<
 ---
 
 ## 2. Commit One File
