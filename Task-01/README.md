@@ -223,7 +223,7 @@ Move the current branch commits on top of the `hot-bugfix` branch while maintain
 git rebase hot-bugfix
 ```
 
-> Replays the current branch commits on top of `hot-bugfix`.
+> Replays the current branch commits on top of `hot-bugfix`branch .
 
 ```bash
 git verify
@@ -237,7 +237,7 @@ git verify
 
 ### Objective
 
-Stop tracking a file while keeping it on the local machine.
+Stop unwanted tracking of a file while keeping the file on the local machine.
 
 ### Commands Used
 
@@ -245,13 +245,13 @@ Stop tracking a file while keeping it on the local machine.
 git rm --cached ignored.txt
 ```
 
-> Removes `ignored.txt` from Git tracking without deleting the local file.
+> Removes `ignored.txt` from Git tracking without any deleting the local file.
 
 ```bash
 git commit -m "Stop tracking ignored.txt"
 ```
 
-> Saves the change in Git history.
+> Saves the change in the Git history.
 
 ```bash
 git verify
@@ -265,7 +265,7 @@ git verify
 
 ### Objective
 
-Rename a file by changing only its letter casing.
+Renaming the name of the file if there is an error in case of the spelling or cases.
 
 ### Commands Used
 
@@ -273,13 +273,13 @@ Rename a file by changing only its letter casing.
 git mv File.txt file.txt
 ```
 
-> Renames the file and stages the change automatically.
+> Renames the file and stages the changes automatically.
 
 ```bash
 git commit -m "Rename File.txt to file.txt"
 ```
 
-> Commits the filename change.
+> Commit the changes made in the file name with a commit message .
 
 ```bash
 git verify
@@ -307,7 +307,7 @@ nano file.txt
 git add file.txt
 ```
 
-> Stages the corrected file.
+> Staging the corret file to the staging area .
 
 ```bash
 git commit --amend -m "Add Hello world"
@@ -322,4 +322,46 @@ git verify
 > Verifies the exercise.
 
 
-12.forge-data
+## 12.Forge-data
+
+### Objective 
+To forge the commit date.
+
+### Commands Used
+
+```bash
+git commit --amend --date="1987-01-01" --no-edit
+```
+>Replaces the last commit , keeping the same commit message, but changes the author date to `1987-01-01`.
+
+```bash
+git verify
+```
+
+> Verifies the exercise.
+
+## 13. Fix Old Typo
+
+### Objective
+Correcting the typo in the previous commit without creating a new commit and preserveing the clean history while resolving any merge conflicts.
+
+### Commands Used 
+```bash
+git rebase -i HEAD~2
+```
+
+>It enables us to edti , modity and delecte the last two commits rewriting the commit history.
+
+```bash
+nano file.txt
+```
+> Opens the file `file.txt` to fix the typo.
+
+```bash
+git add file.txt
+git commit --amend
+git rebase --continue
+```
+
+>Stages the fix to the staging area , amends the target commit and then continues the rebase proceass.
+
