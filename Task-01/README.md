@@ -78,7 +78,7 @@ echo "*.jar" >> .gitignore
 echo "libraries/" >> .gitignore
 ```
 
-> A file `.gitignore` is been created and then addrules to ignore `.exe`, `.o`, `.jar` files and the `libraries/` directory so that these files of such format be ignored .
+> A file `.gitignore` is been created and then add rules to ignore `.exe`, `.o`, `.jar` files and the `libraries/` directory so that these files of such format be ignored .
 
 ```bash
 git add .gitignore
@@ -134,25 +134,20 @@ Resolve the merge conflict and commit the corrected version.
 git reset --hard HEAD~2
 ```
 
-> Removes the last two commits and restores the repository to a previous state.
+> Removes the last two commits and the drags the branch to the revious state.
 
 ```bash
 echo "2+3=5" > equation.txt
 ```
 
-> Replaces the contents of `equation.txt` with the correct equation.
+>This command  Replaces the contents of `equation.txt` with the correct equation.
 
 ```bash
 git add equation.txt
-```
-
-> Stages the resolved file.
-
-```bash
 git commit -m "Resolve merge conflict"
 ```
 
-> Commits the resolved changes.
+> Commits the resolved changes with a discriptive message.
 
 ```bash
 git verify
@@ -166,7 +161,7 @@ git verify
 
 ### Objective
 
-Temporarily save unfinished work, fix an urgent bug, then restore the unfinished work and complete it.
+To Temporarily save unfinished work, fix an urgent bug,restore the unfinished work and complete it.
 
 ### Commands Used
 
