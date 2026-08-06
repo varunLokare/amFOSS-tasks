@@ -14,3 +14,5 @@ After I got into the needed repo for the task, I individually went thouguh all t
 ### Flag Obtained: 
 
 ONE_PIECE{GITO_GITO_NO_AWAKENING}
+
+The pictures are'nt it order.... sorry for the inconvenience 
