@@ -1,0 +1,3 @@
+# Grand Line Guardian
+# External dependency required by the project.
+rich==15.0.0
