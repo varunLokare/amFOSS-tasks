@@ -127,8 +127,6 @@ with Live(console=console, refresh_per_second=2, screen=True) as live:
         )
 
         live.update(create_table(process_list))
-
-        # Replaced time.sleep(1) with a 1-second pause that listens for 'q'
         if select.select([sys.stdin], [], [], 1)[0]:
             user_input = sys.stdin.readline().strip().lower()
             if user_input == 'q':
