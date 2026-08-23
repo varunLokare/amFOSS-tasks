@@ -51,27 +51,27 @@ Note : psutil is not being used for this task.
 While grinding through this task ive learned several new topics and concepts like :
 
 
-# 1. Linux "/proc" file system:
+### 1. Linux "/proc" file system:
 
 The linux `/proc` is a virtual file provided by linux to give the information about processes and system information .
 
-# 2. Process IDs:
+### 2. Process IDs:
 
 I found out that every process that runs in our system has a PID ( process id ) which is useful to access the information under `/proc`.
 
-# 3.Process statistics :
+### 3.Process statistics :
 
 Ive learned how Linux stores the information related to  CPU and memory of each individual procoesses.
 
-# 4. CPU Timin and clock ticking :
+### 4. CPU Timin and clock ticking :
 
 Got to know that CPU usage can be calculated by comparting CPU time between two different points insted of js reading a fixed CPU percentage .
 
-# 5. Terminal application :
+### 5. Terminal application :
 
 Learnt how terminal application can continuoulsy update its output without printing a new output every time the application is refreshed .
 
-# 6. Linux management: 
+### 6. Linux management: 
 Got to understand how linx keeps track of the running processes and provice their information through the kernel interfact .
 
 ## Resources used:
