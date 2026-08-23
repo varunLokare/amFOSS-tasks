@@ -1,4 +1,4 @@
-## Task 05: Grand Line Guardian
+# Task 05: Grand Line Guardian
 
 For this task we had to build a terminal-based system monitoering sysetem similar to monitoring systems like `htop` and `bt0p++`.
 
@@ -6,7 +6,7 @@ This task mainly focuses on to understand the system files and to monitor the pr
 
 Ive built this project using pythong language . Insted of using the library `psuil`( a library of python that help us to fetch the process files direcly without any manually fetcing of the files by the user) , i have directly got the process information from the Linux `/proc` virtual file system Which helped me understand how linux provides information about the running processed through the kernel .
 
-# The application displays :
+## The application displays :
 
 ```text
 .Process ID (PID)
@@ -20,7 +20,7 @@ Ive built this project using pythong language . Insted of using the library `psu
 ```
 All the above application are continuously updated at the terminal in the real time.
 
-# Technologies Used:
+## Technologies Used:
 ```text
 .Python 3
 .Linux
@@ -33,7 +33,7 @@ All the above application are continuously updated at the terminal in the real t
 	.datetime
 Note : The psutil library was not used for this task.
 ```
-#How actually does the program gets the process information :
+## How actually does the program gets the process information :
 
 So basically the Linux `/proc` filesystem stores the information about the running processess insider `/proc` and then linux provies that information for us to work on . We were required to fetch the PID's ( Process id's ) from the `/proc` files and then display all the necessary application that to be displayed for the task.
 
