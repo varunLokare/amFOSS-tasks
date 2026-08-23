@@ -40,4 +40,46 @@ So basically the Linux `/proc` filesystem stores the information about the runni
 The task contents are to be displayed real time so we js need to run the program in the loop in a interval of time less then 1s ( as given by the task instructor) so it allows us to run the program or display the content in real time.
 
 
+## Requirements :
 
+The task only has one external denepdency `rich=15.0.0` and the other modules used in the task such as `0s`,`sys`,`select` and `datetime` are the part of python's standard libarary 
+
+Note : psutil is not being used for this task. 
+
+## Concepts Learned :
+
+While grinding through this task ive learned several new topics and concepts like :
+
+
+# 1. Linux "/proc" file system:
+
+The linux `/proc` is a virtual file provided by linux to give the information about processes and system information .
+
+# 2. Process IDs:
+
+I found out that every process that runs in our system has a PID ( process id ) which is useful to access the information under `/proc`.
+
+# 3.Process statistics :
+
+Ive learned how Linux stores the information related to  CPU and memory of each individual procoesses.
+
+# 4. CPU Timin and clock ticking :
+
+Got to know that CPU usage can be calculated by comparting CPU time between two different points insted of js reading a fixed CPU percentage .
+
+# 5. Terminal application :
+
+Learnt how terminal application can continuoulsy update its output without printing a new output every time the application is refreshed .
+
+# 6. Linux management: 
+Got to understand how linx keeps track of the running processes and provice their information through the kernel interfact .
+
+## Resources used:
+1.AMFOSS Praveshan Task 05 description
+2.Linux /proc filesystem documentation
+3.Rich Python documentation.
+4.Operating Systems: Three Easy Pieces
+
+ 
+
+ 
