@@ -1,5 +1,4 @@
-### Task 10: Surprise Us
+## Task 10: Surprise Us
 
-```text
 I'm Varun Nagnath Lokare, CSE branch. Apart my academics, I've got a handful of hobbies I take seriously: I cook well ( Like really well ), and I do photography and scenic videography and I genuinely think I have a good eye for it. I also draw (pencil) and paint occasionally, and I'm picking up video editing and tryna scale up in it. I read when a book actually hooks me, and I watch anime regularly. In high school I was the best inline skater at my school — haven't kept it up since, mostly because good skating spots are hard to find in India. I'm also a strong swimmer
-```
+
