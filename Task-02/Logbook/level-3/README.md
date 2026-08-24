@@ -1,4 +1,4 @@
-### LEVEL 3 — THE WAX LABYRINTH OF LITTLE GARDEN
+# LEVEL 3 — THE WAX LABYRINTH OF LITTLE GARDEN
 
 ## Repository: Terminal-Voyage-User-Edition
 
