@@ -1,10 +1,10 @@
 # LEVEL 3 — THE WAX LABYRINTH OF LITTLE GARDEN
 
-## Repository: Terminal-Voyage-User-Edition
+### Repository: Terminal-Voyage-User-Edition
 
-## Target Path: ~/Terminal-Voyage-User-Edition/GrandLine/Wax_Jungle/
+### Target Path: ~/Terminal-Voyage-User-Edition/GrandLine/Wax_Jungle/
 
-## Objective :
+### Objective :
 
 We need to find an hidden branch `little_garden` , get into that branch using `git checkout` and then and then locate a file amongst plenty of decory files. Find the file location, and then read it toe pass this level.
 
