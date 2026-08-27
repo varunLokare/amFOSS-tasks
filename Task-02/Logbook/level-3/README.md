@@ -6,7 +6,7 @@
 
 ### Objective :
 
-We need to find an hidden branch `little_garden` , get into that branch using `git checkout` and then and then locate a file amongst plenty of decory files. Find the file location, and then read it toe pass this level.
+We need to find an hidden branch `little_garden` , get into that branch using `git checkout` and then and then locate a file amongst plenty of decoy files. Find the file location, and then read it toe pass this level.
 
 ## My approach :
 
