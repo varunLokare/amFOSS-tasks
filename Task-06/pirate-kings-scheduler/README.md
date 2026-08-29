@@ -1,19 +1,54 @@
-## Pirate King's Scheduler
+# Pirate King's Scheduler
 
 The Pirate Kinds's Scheduler is a CLI scheduling simulator built in Golang. It models the incomming pirate crew as the process competitons for the CPU resources and the the simulation is done in three fundamenta CPU scheduling ways :
 
-1. First Come , First serve ( FIFO )
+1. First Come , First serve ( FCFS )
 2. Shortest job first ( SJF )
 3. Round Robin ( RR ) 
 
 The simulator provides real-time ASCII Gant charts of which crew ( process ) runs when , shows each process's individual state and also calculate the `Average Turnaround Time ( ATAT )` and `Average Waiting Time (AWT) `.
 
-### Mathematical Formulas :
+## Mathematical Formulas :
 
 1. `Turnaround Time` : It is the total time a process spends in the system - from the exact moment it arrives to the moment till the whole process in completely finished .
 
 Formula :
 
 		Turnaound Time = Completion time - Arrival time 
+
+
+2. `Waiting time`: It is the total time spent by an process doing notting waiting for its turn to come to use the CPU.
+
+Formula :
+		Waiting Time = Turnaroundtime - Bust time 
+
+Bust time is the ammount of time a process needes to actually run on the CPU and to finisht its task ( basically "work time" for the process ).
+
+3. Averages :
+	
+	Averatge Waiting Time = Sum of all waiting times / N
+
+	Averate Turnaround Time = Sum of all the turnaround times / N
+
+## Algorithm Implimentation :
+
+### 1. First come , First Serve ( FCFS ):
+
+ FCFA is a non-preemitive schedulling system . Whoever arrices first gets seved first . Once the process gets the access to the CPU , it doesnt stop until it completly finished the process ( bust time ).
+
+
+Implimentation of logic in the code :
+
+1.  All the processes are sorted in the ascending order of `arrivalTime`
+2.  Before excecuting the next process i, checks if the CPU clock ( currentTime ) is behind the process's arrival ( arrivalTime ) . If `currentTime < arrivalTime` , the CPU was sitting idle and was doing ntg so js forward the arrivalTime to currentTime I.E.. `currentTime = arrivalTime`.
+3.  Add the full `bustTime` directly to the current time.
+4.  compute the following :
+ -> Completion time ( CT ) = current time 
+ -> Turnaround time ( TAT )= CT - AT
+ -> Waiting time (WT) = TAT - BT
+5. Repeat immediately for the process i + 1.
+
+### 2. Shortest Job First (SJF — Non-Preemptive):
+
 
 
