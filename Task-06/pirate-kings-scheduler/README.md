@@ -73,5 +73,24 @@ Implimentation of logic in the code :
  -> WT = TAT - BT
 
 ### 3. Round Robin (RR — Preemptive):
+Robbin round allocates every process a fixed time slive ( `Time Quantum `, Q ). if the job is not done in the given time then the CPU pausese it and moves it back to the waiting queue and proceeds with the next process.
+
+Implimentation of logic in the code :
+
+1. Add all the arrived processed to a FIFO queue.
+2. pop the first process from the queue and execute the process up to the time quantum .
+3. Now update the `currentTime` and then reduce the process's remainingTime.
+4. Push newly arrived processes back to the queue before re-queuing the current one .
+5. If the `remainingTime == 0`, mark it complete and then calculate the stats, or else push it back to the queue.
+
+### Topics Learnt :
+1. Queue usage in Robin Round :Learned how to handle the tricky timing when a process finishes its time slice right as a new one arrives.
+2. Handling CPU Idle Time : If the CPU finishes early and the next task hasn't arrived yet, advancing the clock forward prevents the program from freezing and keeps time calculations accurate.
+3. Go structures and slices :By bundling each process's details inside a struct slice (processes []Process), you can modify all its stats directly in one place.
+
+### Resources Used :
+-> Operating System Concepts
+-> The Go Programming Language
+-> GeeksforGeeks OS Scheduling Tutorials
 
 
