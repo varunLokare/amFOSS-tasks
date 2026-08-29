@@ -44,11 +44,11 @@ Implimentation of logic in the code :
 3.  Add the full `bustTime` directly to the current time.
 4.  compute the following :
 
-     -> Completion time ( CT ) = current time 
+     	-> Completion time ( CT ) = current time 
 
-     -> Turnaround time ( TAT )= CT - AT
+     	-> Turnaround time ( TAT )= CT - AT
 
-     -> Waiting time (WT) = TAT - BT
+     	-> Waiting time (WT) = TAT - BT
     
 6. Repeat immediately for the process i + 1.
 
@@ -60,8 +60,9 @@ Implimentation of logic in the code :
 1. Loop runs continiously while `completed < len(processes)`
 2. At the current tick ( `currentTime` ), inspect every process in the list :
 
- -> `arrivalTime <= currentTime` AND `!complete`.
- -> Find the process with the minimum burstTime.
+ 		-> `arrivalTime <= currentTime` AND `!complete`.
+ 
+ 		-> Find the process with the minimum burstTime.
 
 3. If no process satisfy the condition then increment the clock by 1 tick and check again.
 4. Execute Selected Job:
@@ -69,9 +70,9 @@ Implimentation of logic in the code :
  -> Mark completed = true and increment the completed counter.
 
 5.  Calculate Metrics:
-     -> CT = current time 
-     -> TAT = CT - AT
-     -> WT = TAT - BT
+		-> CT = current time 
+     -	-> TAT = CT - AT
+     	-> WT = TAT - BT
 
 ### 3. Round Robin (RR — Preemptive):
 Robbin round allocates every process a fixed time slive ( `Time Quantum `, Q ). if the job is not done in the given time then the CPU pausese it and moves it back to the waiting queue and proceeds with the next process.
