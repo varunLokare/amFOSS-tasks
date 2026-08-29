@@ -43,12 +43,35 @@ Implimentation of logic in the code :
 2.  Before excecuting the next process i, checks if the CPU clock ( currentTime ) is behind the process's arrival ( arrivalTime ) . If `currentTime < arrivalTime` , the CPU was sitting idle and was doing ntg so js forward the arrivalTime to currentTime I.E.. `currentTime = arrivalTime`.
 3.  Add the full `bustTime` directly to the current time.
 4.  compute the following :
+
  -> Completion time ( CT ) = current time 
+
  -> Turnaround time ( TAT )= CT - AT
+
  -> Waiting time (WT) = TAT - BT
 5. Repeat immediately for the process i + 1.
 
 ### 2. Shortest Job First (SJF — Non-Preemptive):
+SJF lookat at all the jobs that have already arrived and are currely waitiing, amongst  all the processed one with the shortest burst time is picked .
 
+Implimentation of logic in the code :
+
+1. Loop runs continiously while `completed < len(processes)`
+2. At the current tick ( `currentTime` ), inspect every process in the list :
+
+ -> `arrivalTime <= currentTime` AND `!complete`.
+ -> Find the process with the minimum burstTime.
+
+3. If no process satisfy the condition then increment the clock by 1 tick and check again.
+4. Execute Selected Job:
+ -> Run the chosen process for its full burstTime: currentTime += burstTime.
+ -> Mark completed = true and increment the completed counter.
+
+5.  Calculate Metrics:
+ -> CT = current time 
+ -> TAT = CT - AT
+ -> WT = TAT - BT
+
+### 3. Round Robin (RR — Preemptive):
 
 
