@@ -70,10 +70,11 @@ Implimentation of logic in the code :
  -> Mark completed = true and increment the completed counter.
 
 5.  Calculate Metrics:
+   ````text
 		-> CT = current time 
      -	-> TAT = CT - AT
      	-> WT = TAT - BT
-
+````
 ### 3. Round Robin (RR — Preemptive):
 Robbin round allocates every process a fixed time slive ( `Time Quantum `, Q ). if the job is not done in the given time then the CPU pausese it and moves it back to the waiting queue and proceeds with the next process.
 
