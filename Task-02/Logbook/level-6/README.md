@@ -1,10 +1,10 @@
-### Level 6 – The Great Merge War at Laugh Tale
+# Level 6 – The Great Merge War at Laugh Tale
 
-## Repository: Laugh-Tale-Merge-War
+### Repository: Laugh-Tale-Merge-War
 
-## Target Path: ~/Laugh-Tale-Merge-War/
+### Target Path: ~/Laugh-Tale-Merge-War/
 
-## Objective :
+### Objective :
 
 The main objective of the level was to resolve the git merge conflicts between two distinct branches to find the final key to successfully end the Task.
 
